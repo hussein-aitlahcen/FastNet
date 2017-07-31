@@ -172,6 +172,7 @@ namespace FastNet.Core
                     break;
 
                 case SocketAsyncOperation.Send:
+                    OnSent(socketEvent);
                     break;
 
                 case SocketAsyncOperation.Disconnect:
