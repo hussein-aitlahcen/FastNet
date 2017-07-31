@@ -40,8 +40,8 @@ namespace FastNet.Sample
                     case Server.ClientDisconnectedEvent disconnectedEvent:
                         break;
                     case Server.DataReceivedEvent dataReceived:
-                        // echo
-                        server.Send(dataReceived.Client.Id, dataReceived.Buffer);
+                        // echo back
+                        server.Send(dataReceived.Client, dataReceived.Buffer);
                         break;
                     case Server.DataSentEvent dataSent:
                         break;

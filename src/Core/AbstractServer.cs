@@ -240,11 +240,14 @@ namespace FastNet.Core
 
         public void Send(ulong clientId, byte[] data)
         {
-            var client = GetClient(clientId);
-            if (client != null)
+            this.scheduler.Schedule(() =>
             {
-                Send(client, data);
-            }
+                var client = GetClient(clientId);
+                if (client != null)
+                {
+                    Send(client, data);
+                }
+            });
         }
 
         private void OnSent(SocketAsyncEventArgs socketEvent)

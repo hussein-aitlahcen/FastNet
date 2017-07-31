@@ -2,7 +2,7 @@
 
 More doc comming soon
 
-# Sample echo server
+# Simple echo server
 
 ```cs
 class Client : AbstractClient
