@@ -41,7 +41,7 @@ class Program
                     break;
                 case Server.DataReceivedEvent dataReceived:
                     // echo
-                    server.Send(dataReceived.Client.Id, dataReceived.Buffer);
+                    server.Send(dataReceived.Client, dataReceived.Buffer);
                     break;
                 case Server.DataSentEvent dataSent:
                     break;
